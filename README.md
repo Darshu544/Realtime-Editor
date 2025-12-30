@@ -2,76 +2,95 @@
 
 # ⚡ Realtime Code Editor
 
-A **basic real-time code editor** where users can **join a room**, **select a programming language**, **choose a version**, **write and run code**, and **share the code in real time** with others using the same room.
+A **basic real-time code editor** where users can **join an auto-generated room**, **select a programming language and version**, **write and run code**, and **share code in real time** with other users in the same room.
 
-A **new room ID is automatically generated** for each session.
+This project focuses on **real-time code sharing**, not advanced IDE features.
 
 ---
 
 ## ✨ Features
 
-* 🔗 **Auto-generated Room ID**
-* 🧑‍🤝‍🧑 **Multiple users can join the same room**
-* 🧠 **Select programming language**
-* 🔢 **Select language version**
-* ✍️ **Real-time code editing**
+* 🔗 **Auto-generate new Room ID**
+* 🧑‍🤝‍🧑 **Join room using Room ID**
+* 🌐 **Real-time code sharing**
+* 🧠 **Language selection**
+* 🔢 **Language version selection**
 * ▶️ **Run code**
-* 📤 **Share code using room ID**
-* 🎯 Simple and beginner-friendly design
+* 📤 **Share code with others in the same room**
+* 🎯 Simple UI and easy to use
 
 ---
 
-## 🧠 How It Works
+## 🧠 How the Application Works
 
-1. A user opens the app
-2. A **new room ID is generated automatically**
+1. User opens the application
+2. A **new Room ID is generated automatically**
 3. User selects:
 
    * Programming language
    * Language version
-4. Users join the same room using the room ID
-5. Code written by one user is **instantly shared** with others
+4. Other users join using the same Room ID
+5. Code typed by one user is **instantly synchronized**
 6. Code can be **executed (run)** inside the editor
 
 ---
 
 ## 🧰 Tech Stack
 
-| Layer           | Technology              |
-| --------------- | ----------------------- |
-| Frontend        | React                   |
-| Backend         | Node.js                 |
-| Real-Time       | Socket.IO               |
-| Code Execution  | API / Backend Execution |
-| Package Manager | npm                     |
+| Layer           | Technology    |
+| --------------- | ------------- |
+| Frontend        | React         |
+| Backend         | Node.js       |
+| Real-Time       | Socket.IO     |
+| Code Execution  | Backend / API |
+| Styling         | CSS           |
+| Package Manager | npm           |
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Folder Structure
 
 ```
-Realtime-Editor/
-├── public/
+realtime-editor/
+│
+├── build/                  # Production build files
+├── node_modules/           # Dependencies
+├── public/                 # Public assets
+│
 ├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── App.js
-│   └── index.js
-├── server.js
+│   ├── components/         # Reusable UI components
+│   ├── pages/              # Application pages
+│   │   ├── Home.js         # Home / Room join page
+│   │   └── EditorPage.js   # Code editor page
+│   │
+│   ├── Action.js           # Editor actions & constants
+│   ├── socket.js           # Socket.IO client configuration
+│   ├── App.js              # Main App component
+│   ├── App.css             # App styles
+│   ├── index.js            # React entry point
+│   ├── index.css           # Global styles
+│   ├── App.test.js
+│   ├── reportWebVitals.js
+│   └── setupTests.js
+│
+├── server.js               # Node.js + Socket.IO server
+├── .env                    # Environment variables
+├── .gitignore
 ├── package.json
+├── package-lock.json
 ├── README.md
-└── .gitignore
+└── TODO.md
 ```
 
 ---
 
-## ⚙️ Installation & Run
+## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/Darshu544/Realtime-Editor.git
-cd Realtime-Editor
+cd realtime-editor
 ```
 
 ---
@@ -90,16 +109,19 @@ npm install
 npm start
 ```
 
-* App runs on:
+* Frontend runs on:
   👉 `http://localhost:3000`
+* Backend runs using `server.js`
 
 ---
 
 ## 📌 Available Scripts
 
-* `npm start` – Run the app
-* `npm run build` – Build for production
-* `npm test` – Run tests (if available)
+| Command         | Description                      |
+| --------------- | -------------------------------- |
+| `npm start`     | Runs the app in development mode |
+| `npm run build` | Builds app for production        |
+| `npm test`      | Runs test cases                  |
 
 ---
 
@@ -107,22 +129,21 @@ npm start
 
 * Basic code sharing
 * Live coding practice
-* Pair programming (basic)
-* College mini project
-* Online coding demonstrations
+* Pair programming (basic level)
+* College mini / final year project
+* Online demonstrations
 
 ---
 
-## 🔮 Future Scope
+## 🔮 Future Improvements (Optional)
 
-* Add user authentication
+* User authentication
 * Chat feature
-* File support
 * More languages
 * Save code history
+* File-based editing
 
 ---
-
 
 
 ## 👨‍💻 Author
@@ -131,3 +152,6 @@ npm start
 GitHub: [https://github.com/Darshu544](https://github.com/Darshu544)
 
 ---
+
+
+Just tell me 👍
