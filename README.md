@@ -1,42 +1,49 @@
-Perfect 👍
-Here is a **clean, professional, industry-ready README** rewritten **specifically for a Real-Time Code Editor** (not text/markdown editor).
-You can **directly copy-paste** this into your `README.md`.
 
----
 
 # ⚡ Realtime Code Editor
 
-A **Real-Time Collaborative Code Editor** that allows multiple users to write and edit code together simultaneously. All changes are synchronized instantly across connected clients, making it ideal for **pair programming, interviews, teaching, and team collaboration**.
+A **basic real-time code editor** where users can **join a room**, **select a programming language**, **choose a version**, **write and run code**, and **share the code in real time** with others using the same room.
+
+A **new room ID is automatically generated** for each session.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-* 🧑‍🤝‍🧑 **Real-time collaborative coding**
-* 🔄 **Live code synchronization** across users
-* 💻 **Multi-user editing support**
-* ⚡ **Low-latency updates using sockets**
-* 🎨 Clean and responsive UI
-* 🛠 Beginner-friendly & extensible architecture
+* 🔗 **Auto-generated Room ID**
+* 🧑‍🤝‍🧑 **Multiple users can join the same room**
+* 🧠 **Select programming language**
+* 🔢 **Select language version**
+* ✍️ **Real-time code editing**
+* ▶️ **Run code**
+* 📤 **Share code using room ID**
+* 🎯 Simple and beginner-friendly design
 
 ---
 
 ## 🧠 How It Works
 
-The editor uses **real-time communication (WebSockets / Socket.IO)** to broadcast code changes instantly to all connected users.
-Whenever one user types, the updated code is sent to the server and then synced with all other users in real time.
+1. A user opens the app
+2. A **new room ID is generated automatically**
+3. User selects:
+
+   * Programming language
+   * Language version
+4. Users join the same room using the room ID
+5. Code written by one user is **instantly shared** with others
+6. Code can be **executed (run)** inside the editor
 
 ---
 
 ## 🧰 Tech Stack
 
-| Layer           | Technology             |
-| --------------- | ---------------------- |
-| Frontend        | React                  |
-| Backend         | Node.js                |
-| Real-Time       | Socket.IO / WebSockets |
-| Package Manager | npm                    |
-| Styling         | CSS                    |
+| Layer           | Technology              |
+| --------------- | ----------------------- |
+| Frontend        | React                   |
+| Backend         | Node.js                 |
+| Real-Time       | Socket.IO               |
+| Code Execution  | API / Backend Execution |
+| Package Manager | npm                     |
 
 ---
 
@@ -44,12 +51,13 @@ Whenever one user types, the updated code is sent to the server and then synced 
 
 ```
 Realtime-Editor/
-├── public/               # Static files
-├── src/                  # React frontend
-│   ├── components/       # Editor components
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
 │   ├── App.js
 │   └── index.js
-├── server.js             # Node.js + Socket server
+├── server.js
 ├── package.json
 ├── README.md
 └── .gitignore
@@ -57,7 +65,7 @@ Realtime-Editor/
 
 ---
 
-## ⚙️ Installation & Setup
+## ⚙️ Installation & Run
 
 ### 1️⃣ Clone the repository
 
@@ -76,63 +84,42 @@ npm install
 
 ---
 
-### 3️⃣ Run the application
+### 3️⃣ Start the application
 
 ```bash
 npm start
 ```
 
-* Frontend runs on:
+* App runs on:
   👉 `http://localhost:3000`
-* Backend socket server runs automatically (or on configured port)
 
 ---
 
 ## 📌 Available Scripts
 
-### ▶ `npm start`
-
-Runs the app in development mode.
-
-### 🏗 `npm run build`
-
-Builds the app for production.
-
-### 🧪 `npm test`
-
-Runs tests (if configured).
+* `npm start` – Run the app
+* `npm run build` – Build for production
+* `npm test` – Run tests (if available)
 
 ---
 
-## 🌍 Use Cases
+## 🎯 Use Cases
 
-* 👨‍💻 Pair programming
-* 🎓 Online teaching / coding classes
-* 🧠 Coding interviews
-* 🧪 Live debugging sessions
-* 🤝 Team collaboration
-
----
-
-## 🔮 Future Enhancements
-
-* 🔐 User authentication
-* 💬 In-editor chat
-* 🧑‍🏫 Role-based access (viewer/editor)
-* 🧾 Code execution support
-* 📂 File & project support
-* 🕘 Version history / undo-redo
+* Basic code sharing
+* Live coding practice
+* Pair programming (basic)
+* College mini project
+* Online coding demonstrations
 
 ---
 
-## 🤝 Contributing
+## 🔮 Future Scope
 
-Contributions are welcome!
-
-1. Fork the repo
-2. Create a new branch
-3. Commit your changes
-4. Open a Pull Request
+* Add user authentication
+* Chat feature
+* File support
+* More languages
+* Save code history
 
 ---
 
@@ -141,8 +128,6 @@ Contributions are welcome!
 ## 👨‍💻 Author
 
 **Darshan Memane**
-GitHub: [@Darshu544](https://github.com/Darshu544)
+GitHub: [https://github.com/Darshu544](https://github.com/Darshu544)
 
 ---
-
-
